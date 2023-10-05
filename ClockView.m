@@ -176,13 +176,13 @@ AMPMStringForHour(int hour)
               h -= 12;
             }	  
           [clockButton setTitle: [NSString stringWithFormat:
-					      _(@"%@. %i %d:%02d %@"), [ShortNameOfDay(dayOfWeek) lowercaseString], newDayOfMonth, h, minute,
+					      _(@"%@. %i %d:%02d %@"), [ShortNameOfDay(dayOfWeek) capitalizedString], newDayOfMonth, h, minute,
 					   AMPMStringForHour(hour)]];
         }
       else
         {
           [clockButton setTitle: [NSString stringWithFormat: _(@"%@. %i %d:%02d"),
-					   [ShortNameOfDay(dayOfWeek) lowercaseString], newDayOfMonth, hour, minute]];
+					   [ShortNameOfDay(dayOfWeek) capitalizedString], newDayOfMonth, hour, minute]];
 	}
     }
 }
